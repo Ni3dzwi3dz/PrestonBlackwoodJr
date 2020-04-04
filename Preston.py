@@ -60,7 +60,8 @@ async def roll(ctx,arg=''):
     
     await ctx.send(embed=resp)
 
-
+if __name__ == "__main__":
+    bot.run(TOKEN, bot=True, reconnect=True)
     
 
 
