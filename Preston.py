@@ -29,11 +29,11 @@ bot= PrestonBlackwoodJr(command_prefix='!')
 
 
 @bot.command(name='roll', description='Basic dice roll function')
-async def roll(ctx,arg='')
+async def roll(ctx,arg=''):
 #Basic roll function
 #optional argument is for negative and positive dice
     FU =  { 1 : 'Nie i...', 2 : 'Nie, po prostu nie', 3 : 'Nie, ale...', 
-            4 : 'Tak, ale', 5 : 'Tak, udało się', 6 : 'Whoooa! Tak i...'
+            4 : 'Tak, ale', 5 : 'Tak, udało się', 6 : 'Whoooa! Tak i...',
             0 : 'Kostka mi wpadła pod szafkę, rzuć jeszcze raz' }
 
     modifier = arg.count('+') - arg.count('-')
