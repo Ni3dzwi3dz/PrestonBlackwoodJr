@@ -22,7 +22,7 @@ class PrestonBlackwoodJr(commands.Bot):
     async def on_ready(self):
         print('Nazywam się Preston Blackwood Jr. Z tych Blackwoodów')
 
-    async def on_error(self, message, error):
+    async def on_error(self,context, message, error):
         await context.send(content=f'Aby rzucić kostką wpisz !roll, dodaj "+" za każdą dodatkową i "-" za każdą karną kość')
 
 bot= PrestonBlackwoodJr(command_prefix='!')
@@ -41,7 +41,7 @@ async def roll(ctx,arg=''):
     result = 0
 
     for _ in range(1+abs(modifier)):
-        result.append(randint(1,6))
+        results.append(randint(1,6))
     try:
         if modifier < 0:
             result = FU[min(results)]
